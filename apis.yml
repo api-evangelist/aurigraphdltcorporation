@@ -1,23 +1,76 @@
 aid: aurigraphdltcorporation
+
 name: Aurigraphdltcorporation
-description: 'Aurigraphdltcorporation is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+description: Aurigraph DLT Corporation is a blockchain-focused company offering decentralized ledger technology solutions. It provides a platform
+  for building, deploying, and managing distributed applications, with services ranging from tokenization to smart contract execution. The company
+  emphasizes security, scalability, and regulatory compliance, targeting enterprises seeking to integrate DLT into their operations.
+
 url: https://raw.githubusercontent.com/api-evangelist/aurigraphdltcorporation/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
+- Blockchain
+- DLT
+- Decentralized
+- Enterprise
+- Platform
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/aurigraphdltcorporation-hosts.yml
+- type: Documentation
+  url: https://dev.aurigraph.io/
+- type: DomainSecurity
+  url: security/aurigraphdltcorporation-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aurigraphdltcorporation
+  url: https://www.aurigraph.io
+- type: PrivacyPolicy
+  url: https://www.aurigraph.io/privacy
+- type: TermsOfService
+  url: https://www.aurigraph.io/terms
+- type: Support
+  url: https://www.aurigraph.io/investors
+- type: GettingStarted
+  url: https://www.aurigraph.io/investors
+
+apis:
+- name: Aurigraph API
+  description: Aurigraph - Decentralized Ledger Technology
+  humanURL: https://www.aurigraph.io/docs
+  baseURL: null
+  aid: aurigraphdltcorporation:aurigraph-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Docs pages return HTML shells with no machine‑readable spec despite HTTP 200
+  evidence:
+  - url: https://www.aurigraph.io/openapi.json
+    status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
